@@ -1,0 +1,420 @@
+<!doctype html>
+<html lang="en" dir="rtl" data-bs-theme="">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dashboard Mini Project</title>
+    <link rel="stylesheet" href="css/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="css/custom.css">
+</head>
+<body>
+<header class="d-lg-none">
+    <nav class="navbar  fixed-top border-bottom border-opacity-25">
+        <div class="container-fluid">
+            <a class="navbar-brand link-body-emphasis fw-700" href="#">پیشخوان</a>
+            <button class="navbar-toggler " type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <img src="images/logo.webp" class="sidebar-header__image me-2">
+                    <h5 id="offcanvasNavbarLabel" class="offcanvas-title link-body-emphasis sidebar-header__title fw-bold  ">سبزلرن</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body d-flex flex-column">
+                    <ul class="nav nav-pills flex-column sidebar-nav">
+                        <li class="nav-item sidebar__nav-item">
+                            <a href="#" class="sidebar__nav-link nav-link  d-flex align-items-center active" >
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 576 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M575.8 255.5c0 18-15 32.1-32 32.1l-32 0 .7 160.2c.2 35.5-28.5 64.3-64 64.3l-320.4 0c-35.3 0-64-28.7-64-64l0-160.4-32 0c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24zM352 224a64 64 0 1 0 -128 0 64 64 0 1 0 128 0zm-96 96c-44.2 0-80 35.8-80 80c0 8.8 7.2 16 16 16l192 0c8.8 0 16-7.2 16-16c0-44.2-35.8-80-80-80l-64 0z"/></svg>
+                                <span class="ms-2">خانه</span>
+                            </a>
+                        </li>
+                        <li class="nav-item sidebar__nav-item">
+                            <a href="#" class="sidebar__nav-link nav-link d-flex align-items-center  ">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zm320 96c0-26.9-16.5-49.9-40-59.3L280 88c0-13.3-10.7-24-24-24s-24 10.7-24 24l0 204.7c-23.5 9.5-40 32.5-40 59.3c0 35.3 28.7 64 64 64s64-28.7 64-64zM144 176a32 32 0 1 0 0-64 32 32 0 1 0 0 64zm-16 80a32 32 0 1 0 -64 0 32 32 0 1 0 64 0zm288 32a32 32 0 1 0 0-64 32 32 0 1 0 0 64zM400 144a32 32 0 1 0 -64 0 32 32 0 1 0 64 0z"/></svg>
+                                <span class="ms-2 text-body-emphasis  fw-bolder">داشبورد</span>
+                            </a>
+                        </li>
+                        <li class="nav-item sidebar__nav-item">
+                            <a href="#" class="sidebar__nav-link nav-link d-flex align-items-center ">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 448 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M398.5 373.6c95.9-122.1 17.2-233.1 17.2-233.1 45.4 85.8-41.4 170.5-41.4 170.5 105-171.5-60.5-271.5-60.5-271.5 96.9 72.7-10.1 190.7-10.1 190.7 85.8 158.4-68.6 230.1-68.6 230.1s-.4-16.9-2.2-85.7c4.3 4.5 34.5 36.2 34.5 36.2l-24.2-47.4 62.6-9.1-62.6-9.1 20.2-55.5-31.4 45.9c-2.2-87.7-7.8-305.1-7.9-306.9v-2.4 1-1 2.4c0 1-5.6 219-7.9 306.9l-31.4-45.9 20.2 55.5-62.6 9.1 62.6 9.1-24.2 47.4 34.5-36.2c-1.8 68.8-2.2 85.7-2.2 85.7s-154.4-71.7-68.6-230.1c0 0-107-118.1-10.1-190.7 0 0-165.5 99.9-60.5 271.5 0 0-86.8-84.8-41.4-170.5 0 0-78.7 111 17.2 233.1 0 0-26.2-16.1-49.4-77.7 0 0 16.9 183.3 222 185.7h4.1c205-2.4 222-185.7 222-185.7-23.6 61.5-49.9 77.7-49.9 77.7z"/></svg>
+                                <span class="ms-2 text-body-emphasis fw-bolder">سفارش ها</span>
+                            </a>
+                        </li>
+                        <li class="nav-item sidebar__nav-item">
+                            <a href="#" class="sidebar__nav-link nav-link d-flex align-items-center  ">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 448 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M96 0C43 0 0 43 0 96L0 416c0 53 43 96 96 96l288 0 32 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l0-64c17.7 0 32-14.3 32-32l0-320c0-17.7-14.3-32-32-32L384 0 96 0zm0 384l256 0 0 64L96 448c-17.7 0-32-14.3-32-32s14.3-32 32-32zm32-240c0-8.8 7.2-16 16-16l192 0c8.8 0 16 7.2 16 16s-7.2 16-16 16l-192 0c-8.8 0-16-7.2-16-16zm16 48l192 0c8.8 0 16 7.2 16 16s-7.2 16-16 16l-192 0c-8.8 0-16-7.2-16-16s7.2-16 16-16z"/></svg>
+                                <span class="ms-2 text-body-emphasis fw-bolder">دوره ها</span>
+                            </a>
+                        </li>
+                        <li class="nav-item sidebar__nav-item">
+                            <a href="#" class="sidebar__nav-link nav-link d-flex align-items-center ">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 576 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M246.9 14.1C234 15.2 224 26 224 39c0 13.8 11.2 25 25 25l151 0c8.8 0 16-7.2 16-16l0-30.6C416 8 408 .7 398.7 1.4L246.9 14.1zM240 112c0 44.2 35.8 80 80 80s80-35.8 80-80c0-5.5-.6-10.8-1.6-16L241.6 96c-1 5.2-1.6 10.5-1.6 16zM72 224c-22.1 0-40 17.9-40 40s17.9 40 40 40l152 0 0 89.4L386.8 230.5c-13.3-4.3-27.3-6.5-41.6-6.5L240 224 72 224zm345.7 20.9L246.6 416 416 416l0-46.3 53.6 90.6c11.2 19 35.8 25.3 54.8 14.1s25.3-35.8 14.1-54.8L462.3 290.8c-11.2-18.9-26.6-34.5-44.6-45.9zM224 448l0 32c0 17.7 14.3 32 32 32l128 0c17.7 0 32-14.3 32-32l0-32-192 0z"/></svg>
+                                <span class="ms-2 text-body-emphasis  fw-bolder">مشتریان</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="mt-auto ">
+                        <hr class="">
+                        <div class="dropdown  dropup  mt-3">
+                            <a href="#" class="dropdown-toggle d-flex align-items-center gap-2"  data-bs-toggle="dropdown" aria-expanded="false" >
+                                <img src="images/sidebar-profile.jpg" class="rounded rounded-circle" width="32px" height="32px">
+                                <strong>ارش وکیلی</strong>
+                            </a>
+                            <ul class="dropdown-menu shadow">
+                                <li><a class="dropdown-item text-body-emphasis " style="font-weight: 300" href="#">پروژه جدید</a></li>
+                                <li><a class="dropdown-item text-body-emphasis" href="#">تنظیمات</a></li>
+                                <li><a class="dropdown-item text-body-emphasis" href="#">پروفایل</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item text-body-emphasis" href="#">خروج</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+<main>
+    <div class="container-fluid ">
+        <div class="row">
+            <div class="col-12 d-none d-lg-block col-lg-2">
+                <div  class="sidebar  min-vh-100 p-3 shadow d-flex flex-column position-fixed ">
+                    <div class="sidebar-header">
+                        <a href="#" class="sidebar-header__link d-flex align-items-center justify-content-start gap-2 link-body-emphasis">
+                            <img src="images/logo.webp" class="sidebar-header__image">
+                            <span class="text-body-emphasis sidebar-header__title fw-bold fs-4 ">سبزلرن</span>
+                        </a>
+                    </div>
+                    <hr class="my-3">
+                    <ul class="nav nav-pills flex-column sidebar-nav">
+                        <li class="nav-item sidebar__nav-item">
+                            <a href="#" class="sidebar__nav-link nav-link  d-flex align-items-center active" >
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 576 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M575.8 255.5c0 18-15 32.1-32 32.1l-32 0 .7 160.2c.2 35.5-28.5 64.3-64 64.3l-320.4 0c-35.3 0-64-28.7-64-64l0-160.4-32 0c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24zM352 224a64 64 0 1 0 -128 0 64 64 0 1 0 128 0zm-96 96c-44.2 0-80 35.8-80 80c0 8.8 7.2 16 16 16l192 0c8.8 0 16-7.2 16-16c0-44.2-35.8-80-80-80l-64 0z"/></svg>
+                                <span class="ms-2">خانه</span>
+                            </a>
+                        </li>
+                        <li class="nav-item sidebar__nav-item">
+                            <a href="#" class="sidebar__nav-link nav-link d-flex align-items-center link-body-emphasis ">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zm320 96c0-26.9-16.5-49.9-40-59.3L280 88c0-13.3-10.7-24-24-24s-24 10.7-24 24l0 204.7c-23.5 9.5-40 32.5-40 59.3c0 35.3 28.7 64 64 64s64-28.7 64-64zM144 176a32 32 0 1 0 0-64 32 32 0 1 0 0 64zm-16 80a32 32 0 1 0 -64 0 32 32 0 1 0 64 0zm288 32a32 32 0 1 0 0-64 32 32 0 1 0 0 64zM400 144a32 32 0 1 0 -64 0 32 32 0 1 0 64 0z"/></svg>
+                                <span class="ms-2   fw-bolder">داشبورد</span>
+                            </a>
+                        </li>
+                        <li class="nav-item sidebar__nav-item">
+                            <a  href="#" class="link-body-emphasis sidebar__nav-link nav-link d-flex align-items-center ">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 448 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M398.5 373.6c95.9-122.1 17.2-233.1 17.2-233.1 45.4 85.8-41.4 170.5-41.4 170.5 105-171.5-60.5-271.5-60.5-271.5 96.9 72.7-10.1 190.7-10.1 190.7 85.8 158.4-68.6 230.1-68.6 230.1s-.4-16.9-2.2-85.7c4.3 4.5 34.5 36.2 34.5 36.2l-24.2-47.4 62.6-9.1-62.6-9.1 20.2-55.5-31.4 45.9c-2.2-87.7-7.8-305.1-7.9-306.9v-2.4 1-1 2.4c0 1-5.6 219-7.9 306.9l-31.4-45.9 20.2 55.5-62.6 9.1 62.6 9.1-24.2 47.4 34.5-36.2c-1.8 68.8-2.2 85.7-2.2 85.7s-154.4-71.7-68.6-230.1c0 0-107-118.1-10.1-190.7 0 0-165.5 99.9-60.5 271.5 0 0-86.8-84.8-41.4-170.5 0 0-78.7 111 17.2 233.1 0 0-26.2-16.1-49.4-77.7 0 0 16.9 183.3 222 185.7h4.1c205-2.4 222-185.7 222-185.7-23.6 61.5-49.9 77.7-49.9 77.7z"/></svg>
+                                <span class="ms-2  fw-bolder">سفارش ها</span>
+                            </a>
+                        </li>
+                        <li class="nav-item sidebar__nav-item">
+                            <a href="#" class="link-body-emphasis sidebar__nav-link nav-link d-flex align-items-center  ">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 448 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M96 0C43 0 0 43 0 96L0 416c0 53 43 96 96 96l288 0 32 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l0-64c17.7 0 32-14.3 32-32l0-320c0-17.7-14.3-32-32-32L384 0 96 0zm0 384l256 0 0 64L96 448c-17.7 0-32-14.3-32-32s14.3-32 32-32zm32-240c0-8.8 7.2-16 16-16l192 0c8.8 0 16 7.2 16 16s-7.2 16-16 16l-192 0c-8.8 0-16-7.2-16-16zm16 48l192 0c8.8 0 16 7.2 16 16s-7.2 16-16 16l-192 0c-8.8 0-16-7.2-16-16s7.2-16 16-16z"/></svg>
+                                <span class="ms-2  fw-bolder">دوره ها</span>
+                            </a>
+                        </li>
+                        <li class="nav-item sidebar__nav-item">
+                            <a href="#" class="link-body-emphasis sidebar__nav-link nav-link d-flex align-items-center ">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 576 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M246.9 14.1C234 15.2 224 26 224 39c0 13.8 11.2 25 25 25l151 0c8.8 0 16-7.2 16-16l0-30.6C416 8 408 .7 398.7 1.4L246.9 14.1zM240 112c0 44.2 35.8 80 80 80s80-35.8 80-80c0-5.5-.6-10.8-1.6-16L241.6 96c-1 5.2-1.6 10.5-1.6 16zM72 224c-22.1 0-40 17.9-40 40s17.9 40 40 40l152 0 0 89.4L386.8 230.5c-13.3-4.3-27.3-6.5-41.6-6.5L240 224 72 224zm345.7 20.9L246.6 416 416 416l0-46.3 53.6 90.6c11.2 19 35.8 25.3 54.8 14.1s25.3-35.8 14.1-54.8L462.3 290.8c-11.2-18.9-26.6-34.5-44.6-45.9zM224 448l0 32c0 17.7 14.3 32 32 32l128 0c17.7 0 32-14.3 32-32l0-32-192 0z"/></svg>
+                                <span class="ms-2  fw-bolder">مشتریان</span>
+                            </a>
+                        </li>
+
+                    </ul>
+                    <div class="mt-auto ">
+                        <hr class="">
+                        <div class="dropdown  mt-3">
+                            <a href="#" class="dropdown-toggle d-flex align-items-center gap-2"  data-bs-toggle="dropdown" aria-expanded="false" >
+                                <img src="images/sidebar-profile.jpg" class="rounded rounded-circle" width="32px" height="32px">
+                                <strong>ارش وکیلی</strong>
+                            </a>
+                            <ul class="dropdown-menu shadow">
+                                <li><a class="dropdown-item link-body-emphasis " style="font-weight: 300" href="#">پروژه جدید</a></li>
+                                <li><a class="dropdown-item link-body-emphasis" href="#">تنظیمات</a></li>
+                                <li><a class="dropdown-item link-body-emphasis" href="#">پروفایل</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item link-body-emphasis" href="#">خروج</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-lg-10">
+                <div class="page-left">
+                    <div class="page-left__header">
+                        <a href="#"  class="text-body-emphasis fw-700 d-block d-none d-lg-block h5" style="padding: 28px 0 19px 0;">پیشخوان</a>
+                        <h4 class="fs-5 fw-bolder text-body-emphasis py-3">آرش وکیلی عزیز؛ خوش اومدی 🙌</h4>
+                    </div>
+                    <section class="charts">
+                        <div class="row gy-3">
+                            <div class="col-12 col-sm-6 col-md-4  col-xl-3">
+                                <div class="chart bg-info bg-gradient d-flex position-relative overflow-hidden align-items-center justify-content-between  rounded-3 px-3 py-4">
+                                    <div class="chart__right">
+                                        <h5 class="fw-bold text-light text-nowrap">پیشرفت کاربر</h5>
+                                        <span class="text-light fs-3 text-nowrap">53%</span>
+                                    </div>
+                                    <div class="chart__left">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="117" height="51" viewBox="0 0 117 51" fill="none">
+                                            <g filter="url(#filter0_f_3_639)">
+                                                <circle cx="107" cy="20" r="5" fill="#fff"></circle>
+                                            </g>
+                                            <path d="M1 49.5L8.5 26.5L17 37L22 19.5L31 37L44.5 3L57.5 26.5L72 19.5L83.5 31L93.5 6.5L101 19.5H108" stroke="#fff" stroke-width="2" stroke-linecap="round"></path>
+                                            <defs>
+                                                <filter id="filter0_f_3_639" x="97" y="10" width="20" height="20" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                                    <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
+                                                    <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"></feBlend>
+                                                    <feGaussianBlur stdDeviation="2.5" result="effect1_foregroundBlur_3_639"></feGaussianBlur>
+                                                </filter>
+                                            </defs>
+                                        </svg>
+                                    </div>
+                                    <div class="position-absolute p-1  bg-dark bg-opacity-25 bottom-0 start-0 w-100 d-flex align-items-center justify-content-center gap-2">
+                                        <a href="#" class="text-light text-decoration-none">اطلاعات بیشتر</a>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 448 512">
+                                            <path fill="#fff" d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-4  col-xl-3">
+                                <div class="chart bg-danger bg-gradient d-flex position-relative overflow-hidden align-items-center justify-content-between  rounded-3 px-3 py-4">
+                                    <div class="chart__right">
+                                        <h5 class="fw-bold text-light text-nowrap">دوره ها</h5>
+                                        <span class="text-light fs-3 text-nowrap">10</span>
+                                    </div>
+                                    <div class="chart__left">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="117" height="51" viewBox="0 0 117 51" fill="none">
+                                            <g filter="url(#filter0_f_3_639)">
+                                                <circle cx="107" cy="20" r="5" fill="#fff"></circle>
+                                            </g>
+                                            <path d="M1 49.5L8.5 26.5L17 37L22 19.5L31 37L44.5 3L57.5 26.5L72 19.5L83.5 31L93.5 6.5L101 19.5H108" stroke="#fff" stroke-width="2" stroke-linecap="round"></path>
+                                            <defs>
+                                                <filter id="filter0_f_3_639" x="97" y="10" width="20" height="20" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                                    <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
+                                                    <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"></feBlend>
+                                                    <feGaussianBlur stdDeviation="2.5" result="effect1_foregroundBlur_3_639"></feGaussianBlur>
+                                                </filter>
+                                            </defs>
+                                        </svg>
+                                    </div>
+                                    <div class="position-absolute p-1  bg-dark bg-opacity-25 bottom-0 start-0 w-100 d-flex align-items-center justify-content-center gap-2">
+                                        <a href="#" class="text-light text-decoration-none">اطلاعات بیشتر</a>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 448 512">
+                                            <path fill="#fff" d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-4  col-xl-3">
+                                <div class="chart bg-primary bg-gradient d-flex position-relative overflow-hidden align-items-center justify-content-between  rounded-3 px-3 py-4">
+                                    <div class="chart__right">
+                                        <h5 class="fw-bold text-light text-nowrap">مجموع تیکت ها</h5>
+                                        <span class="text-light fs-3 text-nowrap">20</span>
+                                    </div>
+                                    <div class="chart__left">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="117" height="51" viewBox="0 0 117 51" fill="none">
+                                            <g filter="url(#filter0_f_3_639)">
+                                                <circle cx="107" cy="20" r="5" fill="#fff"></circle>
+                                            </g>
+                                            <path d="M1 49.5L8.5 26.5L17 37L22 19.5L31 37L44.5 3L57.5 26.5L72 19.5L83.5 31L93.5 6.5L101 19.5H108" stroke="#fff" stroke-width="2" stroke-linecap="round"></path>
+                                            <defs>
+                                                <filter id="filter0_f_3_639" x="97" y="10" width="20" height="20" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                                    <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
+                                                    <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"></feBlend>
+                                                    <feGaussianBlur stdDeviation="2.5" result="effect1_foregroundBlur_3_639"></feGaussianBlur>
+                                                </filter>
+                                            </defs>
+                                        </svg>
+                                    </div>
+                                    <div class="position-absolute p-1  bg-dark bg-opacity-25 bottom-0 start-0 w-100 d-flex align-items-center justify-content-center gap-2">
+                                        <a href="#" class="text-light text-decoration-none">اطلاعات بیشتر</a>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 448 512">
+                                            <path fill="#fff" d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-4  col-xl-3">
+                                <div class="chart bg-success bg-gradient d-flex position-relative overflow-hidden align-items-center justify-content-between  rounded-3 px-3 py-4">
+                                    <div class="chart__right">
+                                        <h5 class="fw-bold text-light text-nowrap">موجودی حساب</h5>
+                                        <span class="text-light fs-3 text-nowrap">0 تومن</span>
+                                    </div>
+                                    <div class="chart__left">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="117" height="51" viewBox="0 0 117 51" fill="none">
+                                            <g filter="url(#filter0_f_3_639)">
+                                                <circle cx="107" cy="20" r="5" fill="#fff"></circle>
+                                            </g>
+                                            <path d="M1 49.5L8.5 26.5L17 37L22 19.5L31 37L44.5 3L57.5 26.5L72 19.5L83.5 31L93.5 6.5L101 19.5H108" stroke="#fff" stroke-width="2" stroke-linecap="round"></path>
+                                            <defs>
+                                                <filter id="filter0_f_3_639" x="97" y="10" width="20" height="20" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                                    <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
+                                                    <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"></feBlend>
+                                                    <feGaussianBlur stdDeviation="2.5" result="effect1_foregroundBlur_3_639"></feGaussianBlur>
+                                                </filter>
+                                            </defs>
+                                        </svg>
+                                    </div>
+                                    <div class="position-absolute p-1  bg-dark bg-opacity-25 bottom-0 start-0 w-100 d-flex align-items-center justify-content-center gap-2">
+                                        <a href="#" class="text-light text-decoration-none">اطلاعات بیشتر</a>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 448 512">
+                                            <path fill="#fff" d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="table-section">
+                        <div class="table-responsive border border-secondary mt-3 border-opacity-10">
+                            <table class="table caption-top table-borderless">
+                                <caption class="p-2 border-bottom border-secondary border-opacity-10 fs-4 fw-bold">وضعیت</caption>
+                                <thead>
+                                    <tr>
+                                        <th class="text-nowrap" scope="col">#</th>
+                                        <th class="text-nowrap" scope="col">دوره</th>
+                                        <th class="text-nowrap" scope="col">مدرس</th>
+                                        <th class="text-nowrap" scope="col">تصویر</th>
+                                        <th class="text-nowrap" scope="col">شروع</th>
+                                        <th class="text-nowrap" scope="col">وضعیت</th>
+                                        <th class="text-nowrap" scope="col">درصد یادگیری</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="table-group-divider">
+                                    <tr>
+                                        <th class="text-nowrap">1</th>
+                                        <td class="text-nowrap">بوت استرپ</td>
+                                        <td class="text-nowrap">مهرشاد براتی</td>
+                                        <td><img src="images/sidebar-profile.jpg"></td>
+                                        <td class="text-nowrap">10 بهمن</td>
+                                        <td><span class="badge bg-success rounded-pill">گذرانده شده</span></td>
+                                        <td>
+                                            <div class="progress " role="progressbar" aria-label="Example with label" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                                                <div class="progress-bar bg-success" style="width: 100%">100%</div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="text-nowrap">2</th>
+                                        <td class="text-nowrap">پایتون</td>
+                                        <td class="text-nowrap">آرش وکیلی</td>
+                                        <td><img src="images/sidebar-profile.jpg"></td>
+                                        <td class="text-nowrap">20 بهمن</td>
+                                        <td><span class="badge bg-success rounded-pill">گذرانده نشده</span></td>
+                                        <td>
+                                            <div class="progress" role="progressbar" aria-label="Example with label" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                                                <div class="progress-bar bg-danger" style="width: 0">0%</div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="text-nowrap">3</th>
+                                        <td class="text-nowrap">جاوا</td>
+                                        <td class="text-nowrap">عادل وکیلی</td>
+                                        <td><img src="images/sidebar-profile.jpg"></td>
+                                        <td class="text-nowrap">30 بهمن</td>
+                                        <td><span class="badge bg-success rounded-pill">در حال یادگیری</span></td>
+                                        <td>
+                                            <div class="progress" role="progressbar" aria-label="Example with label" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                                                <div class="progress-bar bg-warning" style="width: 33%">33%</div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="text-nowrap">4</th>
+                                        <td class="text-nowrap">سی شارپ</td>
+                                        <td class="text-nowrap">عارف وکیلی</td>
+                                        <td><img src="images/sidebar-profile.jpg"></td>
+                                        <td class="text-nowrap">13 بهمن</td>
+                                        <td><span class="badge bg-success rounded-pill">در حال یادگیری</span></td>
+                                        <td>
+                                            <div class="progress" role="progressbar" aria-label="Example with label" aria-valuenow="73" aria-valuemin="0" aria-valuemax="100">
+                                                <div class="progress-bar bg-info" style="width: 73%">73%</div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+                    <section aria-label="Page navigation example" class=" d-flex justify-content-center mt-4 mb-5">
+                        <ul class="pagination">
+                            <li class="page-item disabled">
+                                <a class="page-link disabled">قبلی</a>
+                            </li>
+                            <li class="page-item active">
+                                <a class="page-link" href="#">1</a>
+                            </li>
+                            <li class="page-item" aria-current="page">
+                                <a class="page-link" href="#">2</a>
+                            </li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item">
+                                <a class="page-link" href="#">بعدی</a>
+                            </li>
+                        </ul>
+                    </section>
+                    <section class="section-form">
+                        <h4 class="h4 fw-bolder p-2">اطلاعات کاربر</h4>
+                        <form class="p-3">
+                            <div class="row row-gap-4">
+                                <div class="col-12 col-sm-6">
+                                    <label class="form-label" for="inputName">نام</label>
+                                    <input type="text" class="form-control" placeholder="نام" id="inputName">
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    <label class="form-label" for="inputFamily">نام خانوادگی</label>
+                                    <input type="text" class="form-control" placeholder="نام خانوادگی" id="inputFamily">
+                                </div>
+                            </div>
+                            <div class="row row-gap-4 mt-4">
+                                <div class="col-12 col-sm-6">
+                                    <label class="form-label" for="inputEmail">ایمیل</label>
+                                    <input type="email" class="form-control" placeholder="ایمیل" id="inputEmail">
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    <label class="form-label" for="inputJob">شغل</label>
+                                    <input type="text" class="form-control" placeholder="نام خانوادگی" id="inputJob">
+                                </div>
+                            </div>
+                            <div class="row row-gap-4 mt-4">
+                                <div class="col-12 col-sm-6">
+                                    <label class="form-label" for="inputPic">تصویر</label>
+                                    <input type="file" class="form-control"  id="inputPic">
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    <label class="form-label" for="inputJob">سن</label>
+                                    <input type="number" class="form-control" min="18" max="100" value="20" id="inputَAge">
+                                </div>
+                            </div>
+                            <div class="mt-3">
+                                <button class="btn btn-success">آپدیت</button>
+                            </div>
+                        </form>
+                    </section>
+                </div>
+            </div>
+        </div>
+        <div class="dropdown position-fixed bottom-0 end-0 me-3 mb-3">
+            <button class="dropdown-toggle btn btn-primary" data-bs-toggle="dropdown">تغییر تم</button>
+            <ul class="dropdown-menu">
+                <li >
+                    <button class="dropdown-item active" id="lightModBtn">روشن</button>
+                </li>
+                <li >
+                    <button class="dropdown-item" id="darkModBtn" >تاریک</button>
+                </li>
+            </ul>
+        </div>
+    </div>
+</main>
+
+
+
+
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
+

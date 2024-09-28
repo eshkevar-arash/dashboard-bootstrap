@@ -1,0 +1,106 @@
+@font-face {
+    font-family: 'YekanBakh' ;
+    font-style: normal;
+    font-weight: 900;
+    src: url('../fonts/YekanBakh-Fat.e508fcc6.woff')format('woff');
+}
+@font-face {
+    font-family: 'YekanBakh' ;
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/YekanBakh-Heavy.630c4fa4.woff')format('woff');
+}
+@font-face {
+    font-family: 'YekanBakh' ;
+    font-style: normal;
+    font-weight: 600;
+    src: url('../fonts/YekanBakh-Bold.bbd877a3.woff')format('woff');
+}
+@font-face {
+    font-family: 'YekanBakh' ;
+    font-style: normal;
+    font-weight: 500;
+    src: url('../fonts/YekanBakh-Medium.f7360956.woff')format('woff');
+}
+body{
+    font-family: YekanBakh;
+}
+.fw-500{
+    font-weight: 500;
+}
+.fw-600{
+    font-weight: 600;
+}
+.fw-700{
+    font-weight: 700;
+}
+.fw-800{
+    font-weight: 800;
+}
+.fw-900{
+    font-weight: 900;
+}
+header{
+    height: 56px;
+}
+main > .container-fluid{
+    /*padding-left: 0 !important;*/
+    /*padding-right: 0 !important;*/
+}
+main .container-fluid .row > .col-12.col-lg-2{
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+/*===========================Sidebar==================================*/
+.sidebar{
+
+}
+.sidebar-header{
+
+}
+.sidebar-header__link{
+
+}
+.sidebar__nav-link span{
+    position: relative;
+    top: 2px;
+}
+.sidebar-header__image{
+    width: 70px;
+}
+.sidebar-header__title{
+
+}
+.nav-link svg path{
+    fill: dimgray;
+}
+.nav-link.active svg path{
+    fill: #ffffff !important;
+}
+
+table td img{
+    width: 32px;
+    height: 32px;
+    border-radius: 100%;
+}
+table td{
+    /*display: flex;*/
+    /*align-items: center;*/
+}
+table tbody td , tbody th{
+    height: 48px!important;
+    line-height: 48px !important;
+}
+table .progress{
+    position: relative;
+    top: 50%;
+}
+
+
+@media screen and (min-width: 992px){
+.navbar-brand{
+    margin-right: 180px;
+}
+
+
+}
